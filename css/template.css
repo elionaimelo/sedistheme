@@ -371,13 +371,13 @@ input[type=search] {
   margin-bottom: 10px;
 }
 #editais .edital .box-icones {
-  padding-left: 1.6em;
+  padding-left: 1.7em;
 }
 #editais .edital .box-icones a {
   color: #27AAE1;
 }
-#editais .edital .box-icones a:not(:first-child) {
-  padding-left: 30px;
+.edital .box-icones a:not(:first-child) {
+  padding-left: 35px;
 }
 .form-modify, .nf-field-element textarea  {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
@@ -725,6 +725,60 @@ span.current {
    list-style: none;
 }
 
+.sidebar1 .form-control , .input-group .input-group-append .input-group-text{
+  border-color: #c1c1c1;
+}
+
+.pesquisar-input {
+  margin-bottom: 30px;
+}
+
+ul.page-numbers {
+  list-style: none;
+  margin: 0;
+}
+
+.page-numbers:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+ul.page-numbers li {
+  display: block;
+  float: left;
+  margin: 0 4px 4px 0;
+  text-align: center;
+}
+
+.page-numbers a,
+.page-numbers span {
+  line-height: 1.6em;
+  display: block;
+  padding: 0 6px;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid #c1c1c1;
+  border-radius: 15px;
+  padding: 2px 15px;
+  font-size: 14px;
+}
+
+.page-numbers a span { padding: 0 }
+
+.page-numbers a:hover,
+.page-numbers.current,
+.page-numbers.current:hover {
+  background-color: #888;
+  border-color: #888;
+  color: #fff;
+  text-decoration: none;
+}
+
+.page-numbers:hover { text-decoration: none }
 
 
 @media screen and (max-width: 991px) {

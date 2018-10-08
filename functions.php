@@ -133,7 +133,7 @@ function wp_custom_breadcrumbs() {
 		echo $before . 'categoria "' . single_cat_title('', false) . '"' . $after;
    
 	  } elseif ( is_search() ) {
-		echo $before . 'Search results for "' . get_search_query() . '"' . $after;
+		echo $before . 'Resultado da pesquisa por "' . get_search_query() . '"' . $after;
    
 	  } elseif ( is_day() ) {
 		echo '<a href="' . get_year_link(get_the_time('Y')) . '">' . get_the_time('Y') . '</a> ' . $delimiter . ' ';
@@ -212,3 +212,36 @@ function wp_custom_breadcrumbs() {
    
 	}
   } // end wp_custom_breadcrumbs()
+
+	if ( !function_exists( 'wpex_pagination' ) ) {
+	
+		function wpex_pagination() {
+			
+			$prev_arrow = is_rtl() ? 'PRÓXIMO' : 'ANTERIOR';
+			$next_arrow = is_rtl() ? 'ANTERIOR' : 'PRÓXIMO';
+			
+			global $wp_query;
+			$total = $wp_query->max_num_pages;
+			$big = 999999999; // need an unlikely integer
+			if( $total > 1 )  {
+				 if( !$current_page = get_query_var('paged') )
+					 $current_page = 1;
+				 if( get_option('permalink_structure') ) {
+					 $format = 'page/%#%/';
+				 } else {
+					 $format = '&paged=%#%';
+				 }
+				echo paginate_links(array(
+					'base'			=> str_replace( $big, '%#%', esc_url( get_pagenum_link( $big ) ) ),
+					'format'		=> $format,
+					'current'		=> max( 1, get_query_var('paged') ),
+					'total' 		=> $total,
+					'mid_size'		=> 3,
+					'type' 			=> 'list',
+					'prev_text'		=> $prev_arrow,
+					'next_text'		=> $next_arrow,
+				 ) );
+			}
+		}
+		
+	}

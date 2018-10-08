@@ -31,6 +31,8 @@
 
 														
 													</article>
+
+													
 													<?php 
 														endwhile;
 
@@ -60,7 +62,7 @@
 										?>	
 								</div>
 							</div>
-
+							<?php wpex_pagination(); ?>
 			
 							
 

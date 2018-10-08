@@ -6,7 +6,7 @@
       <div class="container">
         <div id="carouselDestaque" class="carousel slide" data-ride="carousel">
           <div class="carousel-inner">
-            <?php $the_query = new WP_Query( 'posts_per_page=5' ); ?>
+            <?php $the_query = new WP_Query( 'posts_per_page=4' ); ?>
             <?php while ($the_query -> have_posts()) : $the_query -> the_post(); 
               $c++;
               if ( $c == 1 ) $class .= ' active';
@@ -144,7 +144,7 @@
                        
                         <?php get_template_part( 'content', 'concursos' ); ?>
       
-                        <a href="concursos" class="btn btn-primary btn-round btn-lg float-right" role="button" aria-disabled="true">Saiba mais</a>
+                        <a href="<?php echo home_url('/concursos'); ?>" class="btn btn-primary btn-round btn-lg float-right" role="button" aria-disabled="true">Saiba mais</a>
                     </div>
                   </div>  
                 </div>
@@ -289,7 +289,7 @@
           <div class="row">
             <div class="col-md-12">
             <br>
-              <a class="btn btn-primary btn-round text-uppercase" role="button" aria-disabled="true">+ notícias</a>
+              <a href="<?php echo home_url('/noticias'); ?>" class="btn btn-primary btn-round text-uppercase" role="button" aria-disabled="true">+ notícias</a>
             </div>
           </div>
 

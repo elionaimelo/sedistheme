@@ -46,12 +46,7 @@
 							)
 						);
           ?>
-          <div class="custom-search">
-                  <form method="POST" action="#" role="search" novalidate="">
-                      <input required="" name="q" placeholder="Pesquisar" class="form-control tt-input" id="pesquisar-customizado" autocomplete="off" spellcheck="false" dir="auto" type="text">
-                      <button class="search-btn" type="submit"><span aria-hidden="true" class="icon_search"></span></button>
-                </form>
-            </div>
+         <?php get_template_part( 'searchform1' ); ?>
         </div>
       </div>
     </nav>
