@@ -101,6 +101,14 @@ function sedis_widgets_init() {
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</div>',
 	));
+
+	register_sidebar( array(
+		'name'          => esc_html__( 'Localização da sedis', 'sedis' ),
+		'description'   => esc_html__( 'Insira o endereço do google maps e use a class="embed-responsive-item" na tag <iframe>', 'sedis' ),
+		'id'            => 'widget-5',
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
+	));
 	
 	
 }

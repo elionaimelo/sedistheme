@@ -8,7 +8,7 @@
 									
 									<?php 
 
-											if ( !is_front_page() && is_home() ) {
+
 												// Se houver algum post
 												if(have_posts()) :
 													// Enquanto houver algum post, chame o post de determinada maneira
@@ -26,7 +26,7 @@
 															$trimmed_content = wp_trim_words( $content, 40, '<div class="clearfix"></div><p><a href="'. get_permalink() .'" class="btn btn-primary btn-round" role="button" aria-disabled="true">Saiba mais</a></p>' ); ?>
 															<p><?php echo $trimmed_content; ?></p>
 															<br>
-														
+														<p><?php the_tags('Tags: ', ', '); ?></p>
 														<p> Categoria: <?php the_category(', '); ?></p>
 
 														
@@ -45,37 +45,6 @@
 														endif;
 													?>
 
-
-
-
-										<?php 
-											}if (is_page( 'concursos' ) ): ?>
-												
-												<?php get_template_part( 'content', 'concursos' ); ?>
-
-												<br>
-										<?php
-											endif;
-
-											?>
-											
-											<?php
-											if (is_page( 'contato' ) ): 
-							
-												echo do_shortcode("[ninja_form id=2]"); 
-
-
-											?>
-											<h3>Localização</h3>
-											<?php
-
-												if( is_active_sidebar('widget-5')) : ?> 
-												<?php dynamic_sidebar('widget-5') ?>
-											<?php endif;  	
-												
-											endif;
-											
-										?>	
 								</div>
 							</div>
 							<?php wpex_pagination(); ?>
@@ -85,7 +54,7 @@
                 </div>
 
                 <div class="col-md-4">
-                	<?php get_sidebar(); ?>
+                <?php get_sidebar(); ?>
                 </div>
           </div>
        </div>

@@ -23,6 +23,11 @@ strong {
   font-weight: bold;
 }
 
+.category {
+  font-weight: 500;
+  color: #404040;
+}
+
 .breadcrumb {
   background: transparent;
 }
@@ -735,7 +740,7 @@ span.current {
 
 ul.page-numbers {
   list-style: none;
-  margin: 0;
+  margin: 0 0 20px 0;
 }
 
 .page-numbers:after {
@@ -761,7 +766,7 @@ ul.page-numbers li {
   padding: 0 6px;
   text-decoration: none;
   cursor: pointer;
-  border: 1px solid #c1c1c1;
+  border: 1px solid #27AAE1;
   border-radius: 15px;
   padding: 2px 15px;
   font-size: 14px;
@@ -772,14 +777,17 @@ ul.page-numbers li {
 .page-numbers a:hover,
 .page-numbers.current,
 .page-numbers.current:hover {
-  background-color: #888;
-  border-color: #888;
+  background-color: #27AAE1;
+  border-color: #27AAE1;
   color: #fff;
   text-decoration: none;
 }
 
 .page-numbers:hover { text-decoration: none }
 
+.widget_text {
+  margin-bottom: 35px;
+}
 
 @media screen and (max-width: 991px) {
   .sidebar-collapse .navbar .navbar-toggler-bar, .sidebar-collapse .navbar-collapse:before {
