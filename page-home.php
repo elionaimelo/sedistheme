@@ -180,7 +180,7 @@
         <p class="ambientes">Ambientes virtuais de aprendizagem</p>
         <div class="row">
             <?php 
-                $args = array( 'post_type' => 'ambientesvirtuais', 'posts_per_page' => 4 );
+                $args = array( 'post_type' => 'ambientesvirtuais');
 
                         $the_query = new WP_Query( $args ); 
 
