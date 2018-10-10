@@ -61,7 +61,7 @@ function sedis_widgets_init() {
 
 	register_sidebar(
 		array(
-			'name'		=> 'Barra Lateral 1',
+			'name'		=> 'Sidebar',
 			'id'		=> 'sidebar-1',
 			'before_widget'	=> '<div class="sidebar1">',
 			'after_widget'	=> '</div>',
@@ -199,12 +199,12 @@ function wp_custom_breadcrumbs() {
 		if ($showCurrent == 1) echo ' ' . $delimiter . ' ' . $before . get_the_title() . $after;
    
 	  } elseif ( is_tag() ) {
-		echo $before . 'Posts tagged "' . single_tag_title('', false) . '"' . $after;
+		echo $before . 'Posts da tag "' . single_tag_title('', false) . '"' . $after;
    
 	  } elseif ( is_author() ) {
 		 global $author;
 		$userdata = get_userdata($author);
-		echo $before . 'Articles posted by ' . $userdata->display_name . $after;
+		echo $before . 'Artigos postados por ' . $userdata->display_name . $after;
    
 	  } elseif ( is_404() ) {
 		echo $before . 'Error 404' . $after;

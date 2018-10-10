@@ -1,53 +1,64 @@
-<?php
-/**
- * The template for displaying archive pages
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
- *
- * @package sedis
- */
+<?php get_header('interno'); ?>
 
-get_header();
-?>
+       <div class="container">
+          <div class="row">
+                <div class="col-md-8">
+							<div class="card">
+								<div class="card-body">
+									
+								<?php
+								 if ( have_posts() ) :
+									/* Start the Loop */
+									while ( have_posts() ) :
+										the_post();
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
+										/*
+										* Include the Post-Type-specific template for the content.
+										* If you want to override this in a child theme, then include a file
+										* called content-___.php (where ___ is the Post Type name) and that will be used instead.
+										*/
+										?>
+										<article id="post-<?php the_ID(); ?>" <?php post_class(array('post-format-padrao')); ?>>
+											<h1><a title="<?php the_title_attribute() ?>" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
+											<?php if(has_post_thumbnail()): the_post_thumbnail(array(175,175)); endif; ?>
+											<p>Publicado em <?php echo get_the_date(); ?> por <?php the_author_posts_link(); ?></p>
+											<p>Categorias: <?php the_category(' '); ?></p>
+											<p><?php the_tags('Tags: ', ', '); ?></p>
+											<p><?php the_content(); ?></p>
+										</article>
 
-		<?php if ( have_posts() ) : ?>
+										<?php
 
-			<header class="page-header">
-				<?php
-				the_archive_title( '<h1 class="page-title">', '</h1>' );
-				the_archive_description( '<div class="archive-description">', '</div>' );
-				?>
-			</header><!-- .page-header -->
+									endwhile;
 
-			<?php
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
+									the_posts_navigation();
 
-				/*
-				 * Include the Post-Type-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_type() );
+								else :
 
-			endwhile;
+									get_template_part( 'template-parts/content', 'none' );
 
-			the_posts_navigation();
+								endif;
+								?>
 
-		else :
+								</div>
+							</div>
+							<?php wpex_pagination(); ?>
+			
+							
 
-			get_template_part( 'template-parts/content', 'none' );
+                </div>
 
-		endif;
-		?>
+                <div class="col-md-4">
+                <?php get_sidebar(); ?>
+                </div>
+          </div>
+       </div>
+        
+        <?php get_template_part( 'content', 'footer' ); ?>
+        
+    </div>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+  
+  <?php get_footer(); ?>
 
-<?php
-get_sidebar();
-get_footer();
+

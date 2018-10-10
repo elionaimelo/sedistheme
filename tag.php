@@ -8,7 +8,7 @@
 									
 									<?php 
 
-											if ( !is_front_page() && is_home() ) {
+
 												// Se houver algum post
 												if(have_posts()) :
 													// Enquanto houver algum post, chame o post de determinada maneira
@@ -16,7 +16,7 @@
 
 													?>
 
-													<?php get_template_part( 'content', 'noticias' ); ?>
+													<?php get_template_part( 'content', 'category' ); ?>
 
 													
 													<?php 
@@ -31,37 +31,6 @@
 														endif;
 													?>
 
-
-
-
-										<?php 
-											}if (is_page( 'concursos' ) ): ?>
-												
-												<?php get_template_part( 'content', 'concursos' ); ?>
-
-												<br>
-										<?php
-											endif;
-
-											?>
-											
-											<?php
-											if (is_page( 'contato' ) ): 
-							
-												echo do_shortcode("[ninja_form id=2]"); 
-
-
-											?>
-											<h3>Localização</h3>
-											<?php
-
-												if( is_active_sidebar('widget-5')) : ?> 
-												<?php dynamic_sidebar('widget-5') ?>
-											<?php endif;  	
-												
-											endif;
-											
-										?>	
 								</div>
 							</div>
 							<?php wpex_pagination(); ?>
@@ -71,7 +40,7 @@
                 </div>
 
                 <div class="col-md-4">
-                	<?php get_sidebar(); ?>
+                <?php get_sidebar(); ?>
                 </div>
           </div>
        </div>
