@@ -136,6 +136,7 @@ input[type=search] {
   background-size: cover;
   margin-top: 77px;
   overflow: hidden;
+  min-height: 410px;
 }
 #destaques .carousel-item {
   min-height: 434px;
