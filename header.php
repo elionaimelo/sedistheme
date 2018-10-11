@@ -3,7 +3,7 @@
 <head>
 	<meta name="viewport" content="width=device-width">
 	<meta charset="<?php bloginfo('charset'); ?>">
-	<title><?php bloginfo('name'); ?><?php wp_title('|'); ?></title>
+	<title><?php wp_title('|'); ?></title>
     <meta name="description" content="<?php bloginfo('description'); ?>">
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,700" rel="stylesheet">
 
@@ -22,7 +22,7 @@
                 if ( has_custom_logo() ) {
                         echo '<img src="'. esc_url( $logo[0] ) .'">';
                 } else {
-                        echo '<h1>'. get_bloginfo( 'name' ) .'</h1>';
+                        echo '<h3>'. get_bloginfo( 'name' ) .'</h3>';
                 }
             ?>
           </a>

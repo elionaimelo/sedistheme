@@ -235,18 +235,20 @@
     </section>
     
     <section id="noticias">
-      <img src="<?php echo get_template_directory_uri(); ?>/images/bg-noticias-top.png" alt="" class="img-fluid">
+      <div class="noticias-topo">
+            <div class="container">
+            
+                <div class="txts d-md-none d-lg-block">
+                    <h3 class="text-center title-2">Notícias</h3>
+                    <p class="text-center subtitle-2"><?php the_field('sub'); ?></p>
+                </div>
+
+            </div>
+            
+      </div>
 
       <div class="content">
           <div class="container">
-
-            <div class="txts d-md-none d-lg-block">
-                <h3 class="text-center title-2">Notícias</h3>
-                <p class="text-center subtitle-2">Duis aute irure dolor in reprehenderit in voluptate velit esse<br> 
-                    cillum dolore eu fugiat nulla pariatur.</p>
-            </div>
-            <br/><br/>
-
           <div class="row">
   
               

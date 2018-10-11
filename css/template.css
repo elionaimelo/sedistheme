@@ -528,13 +528,6 @@ input[type=search] {
   color: #7d7d7d;
 }
 
-.txts {
-  position: absolute;
-  top: 130px;
-  left: 50%;
-  margin-left: -220px;
-}
-
 #portfolio .subtitle {
   font-size: 24px;
   font-weight: 300;
@@ -788,6 +781,16 @@ ul.page-numbers li {
 
 .widget_text {
   margin-bottom: 35px;
+}
+
+.txts {
+  padding-top: 112px;
+}
+
+.noticias-topo {
+  background: url(../images/bg-noticias-top.png) no-repeat;
+  background-size: cover;
+  height: 210px;
 }
 
 @media screen and (max-width: 991px) {

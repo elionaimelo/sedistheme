@@ -46,10 +46,19 @@ add_theme_support('custom-header');
 add_theme_support('post-thumbnails');
 add_theme_support('post-formats', array('video', 'image'));
 add_theme_support('html5', array('search-form'));
-add_theme_support('custom-logo', array(
-	'height'	=> 110,
-	'width'		=> 191
-));
+
+
+function sedis_custom_logo_setup() {
+	$defaults = array(
+			'height'      => 100,
+			'width'       => 400,
+			'flex-height' => true,
+			'flex-width'  => true,
+			'header-text' => array( 'site-title', 'site-description' ),
+	);
+	add_theme_support( 'custom-logo', $defaults );
+}
+add_action( 'after_setup_theme', 'sedis_custom_logo_setup' );
 
 
 require_once get_template_directory() . '/core/classes/class-bootstrap-nav.php';
