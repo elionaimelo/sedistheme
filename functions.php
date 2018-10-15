@@ -262,3 +262,4 @@ function wp_custom_breadcrumbs() {
 		}
 		
 	}
+	
