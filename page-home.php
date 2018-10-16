@@ -89,7 +89,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <h3 class="title">Sobre</h3>
+            <h3 class="title-pg">Sobre</h3>
           </div>
           
         </div>
@@ -135,7 +135,7 @@
       <img src="<?php echo get_template_directory_uri(); ?>/images/bg-editais-top.png" class="img-fluid" alt="">
       <div class="content">
           <div class="container">
-              <h3 class="title">Últimos editais e concursos</h3>
+              <h3 class="title-pg">Últimos editais e concursos</h3>
       
               <div class="row">
                 <div class="col-md-7">
@@ -175,7 +175,7 @@
 
     <section id="portfolio">
       <div class="container">
-        <h3 class="title">Portfólio</h3>
+        <h3 class="title-pg">Portfólio</h3>
 
         <p class="ambientes">Ambientes virtuais de aprendizagem</p>
         <div class="row">

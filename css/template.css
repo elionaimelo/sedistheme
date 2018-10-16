@@ -123,7 +123,7 @@ input[type=search] {
   background-color: #004A6F !important;
 }
 
-.title, #portfolio .subtitle {
+.title-pg, #portfolio .subtitle {
   color: #27AAE1;
   font-weight: 500;
   padding-bottom: 20px;
@@ -353,10 +353,47 @@ input[type=search] {
   margin-left: -30px;
 }
 
-.edital h5:before , .pg-interna h5:before , .sidebar1 ul li:before , .postagem h5:before {
+.edital h5:before , .pg-interna h5:before , .sidebar1 ul li:before {
   font-family: "ElegantIcons";
   content: "=";
   padding-right: 10px;
+  position: absolute;
+  left: 16px;
+}
+
+.postagem h5:before {
+  font-family: "ElegantIcons";
+  content: "=";
+  padding-right: 10px;
+}
+
+.dpe-flexible-posts li {
+  position: relative;
+}
+
+.dpe-flexible-posts h4{
+  padding: 0px;
+  margin: 0px;
+  padding-left: 1.2em;
+  font-size: 14px;
+  font-weight: 500;
+  display: initial;
+}
+
+.posts-randomicos ul {
+  margin-left: 0px;
+}
+
+.posts-randomicos li:before {
+  text-indent: 0px;
+}
+
+.posts-randomicos li {
+  text-indent: 0 !important;
+}
+
+.posts-randomicos li a{
+  display: inline-block;
 }
 
 .postagem {
@@ -792,6 +829,8 @@ ul.page-numbers li {
   background-size: cover;
   height: 210px;
 }
+
+
 
 @media screen and (max-width: 991px) {
   .sidebar-collapse .navbar .navbar-toggler-bar, .sidebar-collapse .navbar-collapse:before {

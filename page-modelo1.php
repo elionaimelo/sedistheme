@@ -68,7 +68,7 @@ Template Name: modelo1
 
     <section id="portfolio">
       <div class="container">
-        <h3 class="title">Portfólio</h3>
+        <h3 class="title-pg">Portfólio</h3>
 
         <p class="ambientes">Ambientes virtuais de aprendizagem</p>
         <div class="row">
@@ -130,7 +130,7 @@ Template Name: modelo1
                 <div class="row">
                     <div class="col-md-12">
 
-                            <h3 class="title">Polos de apoio</h3>
+                            <h3 class="title-pg">Polos de apoio</h3>
 
                             <div id="accordion" role="tablist" aria-multiselectable="true" class="card-collapse">
                             <?php 
@@ -175,7 +175,7 @@ Template Name: modelo1
                     <div class="row">
                         <div class="col-md-12">
     
-                                <h3 class="title">Cursos</h3>
+                                <h3 class="title-pg">Cursos</h3>
     
                                 <div id="acordion2" role="tablist" aria-multiselectable="true" class="card-collapse rotate-icon-acordion">
                                 <?php 
@@ -220,7 +220,7 @@ Template Name: modelo1
                     <div class="row">
                         <div class="col-md-12">
     
-                                <h3 class="title">Dúvidas frequentes</h3>
+                                <h3 class="title-pg">Dúvidas frequentes</h3>
     
                                 <div id="acordion3" role="tablist" aria-multiselectable="true" class="card-collapse rotate-icon-acordion">
                                         <?php 
