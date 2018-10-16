@@ -324,14 +324,14 @@ input[type=search] {
 .edital h5 , .pg-interna h5 , .sidebar1 ul li {
   padding-left: 1.5em;
   margin-bottom: 3px;
-  text-indent: -1.5em;
+  /* text-indent: -1.5em; */
   font-weight: 500;
 }
 
 .pg-interna h5 , .sidebar1 ul li , .postagem h5{
   padding-left: 1.5em;
   margin-bottom: 3px;
-  text-indent: -1.5em;
+  /* text-indent: -1.5em; */
   font-weight: 500;
 }
 
@@ -365,6 +365,10 @@ input[type=search] {
   font-family: "ElegantIcons";
   content: "=";
   padding-right: 10px;
+}
+
+.pg-interna h5 {
+  text-indent: 0px;
 }
 
 .dpe-flexible-posts li {
