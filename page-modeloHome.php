@@ -1,3 +1,10 @@
+<?php
+/*
+Template Name: Home
+*/
+?>
+
+
 <?php get_header(); ?>
 
 <div class="wrapper">
@@ -21,7 +28,7 @@
                 <h2><?php the_title(); ?></h2>
   
               </article>
-                <a href="<?php the_permalink() ?>" class="btn btn-sem-bg btn-round btn-lg" role="button" aria-disabled="true">Saiba mais</a>
+                <a href="<?php the_permalink() ?>" class="btn btn-sem-bg btn-round btn-lg" role="button" aria-disabled="true"><?php pll_e('Saiba mais'); ?></a>
             </div>
             <?php 
             endwhile;
@@ -43,7 +50,7 @@
     <section id="ambientes-virtuais" class="remove-padding">
         <div class="container">
           <div class="row">
-              <h6 class="ambientes">Ambientes virtuais de aprendizagem:</h6>
+              <h6 class="ambientes"><?php pll_e('Ambientes virtuais de aprendizagem'); ?></h6>
           </div>
           <div class="row">
             <?php 
@@ -89,7 +96,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-12">
-            <h3 class="title-pg">Sobre</h3>
+            <h3 class="title-pg"><?php pll_e('Sobre'); ?></h3>
           </div>
           
         </div>
@@ -102,7 +109,7 @@
                           <?php dynamic_sidebar('widget-1') ?>
                         </article>
 
-                      <a class="btn btn-primary btn-round btn-lg" role="button" aria-disabled="true">Saiba mais</a>
+                      <a href="<?php echo get_option("siteurl"); ?>" class="btn btn-primary btn-round btn-lg" role="button" aria-disabled="true"><?php pll_e('Saiba mais'); ?></a>
 
                       </div>
                       <div class="col-md-6 reveal7">
@@ -121,7 +128,7 @@
                         <?php dynamic_sidebar('widget-1') ?>
                       </article>
 
-                    <a class="btn btn-primary btn-round btn-lg" role="button" aria-disabled="true">Saiba mais</a>
+                    <a class="btn btn-primary btn-round btn-lg" role="button" aria-disabled="true"><?php pll_e('Saiba mais'); ?></a>
 
                 <?php endif;  ?>
                   
@@ -135,7 +142,7 @@
       <img src="<?php echo get_template_directory_uri(); ?>/images/bg-editais-top.png" class="img-fluid" alt="">
       <div class="content">
           <div class="container">
-              <h3 class="title-pg">Últimos editais e concursos</h3>
+              <h3 class="title-pg"><?php pll_e('Últimos editais e concursos'); ?></h3>
       
               <div class="row">
                 <div class="col-md-7">
@@ -144,7 +151,7 @@
                        
                         <?php get_template_part( 'content', 'concursos' ); ?>
       
-                        <a href="<?php echo home_url('/concursos'); ?>" class="btn btn-primary btn-round btn-lg float-right" role="button" aria-disabled="true">Saiba mais</a>
+                        <a href="<?php echo home_url('/concursos'); ?>" class="btn btn-primary btn-round btn-lg float-right" role="button" aria-disabled="true"><?php pll_e('Saiba mais'); ?></a>
                     </div>
                   </div>  
                 </div>
@@ -152,11 +159,13 @@
       
                     <div class="h-100">
                         <div class="row align-items-center h-100">
-                            <div class="col-12 mx-auto">
-                                    <h3 class="title-2 text-center">Contato</h3>
-                                    <p class="text-center"><strong>Secretaria</strong><br>Telefone: (84) 3342-2250 R. 119/120</p>
+                            <div class="col-12 mx-auto form-home">
+                                    <h3 class="title-2 text-center"><?php pll_e('Contato'); ?></h3>
+                                    <?php if( is_active_sidebar('widget-6') ) : ?>
+                                        <?php dynamic_sidebar('widget-6') ?>
+                                    <?php endif;  ?>
                       
-                                    <?php echo do_shortcode("[ninja_form id=2]"); ?>
+                                    <?php echo do_shortcode("[cf7-form cf7key='teste']");  ?>
       
                             </div>
                         </div>
@@ -175,9 +184,9 @@
 
     <section id="portfolio">
       <div class="container">
-        <h3 class="title-pg">Portfólio</h3>
+        <h3 class="title-pg"><?php pll_e('Portfólio'); ?></h3>
 
-        <p class="ambientes">Ambientes virtuais de aprendizagem</p>
+        <p class="ambientes"><?php pll_e('Ambientes virtuais de aprendizagem'); ?></p>
         <div class="row">
             <?php 
                 $args = array( 'post_type' => 'ambientesvirtuais');
@@ -222,7 +231,7 @@
           
             <div class="row">
               <div class="col-lg-12">
-                  <h5 class="subtitle">Materiais de educação e comunicação</h5>
+                  <h5 class="subtitle"><?php pll_e('Materiais de educação e comunicação'); ?></h5>
               </div>
             </div>
 
@@ -239,8 +248,7 @@
             <div class="container">
             
                 <div class="txts d-md-none d-lg-block">
-                    <h3 class="text-center title-2">Notícias</h3>
-                    <p class="text-center subtitle-2"><?php the_field('sub'); ?></p>
+                    <h3 class="text-center title-2"><?php pll_e('Notícias'); ?></h3>
                 </div>
 
             </div>
@@ -291,7 +299,7 @@
           <div class="row">
             <div class="col-md-12">
             <br>
-              <a href="<?php echo home_url('/noticias'); ?>" class="btn btn-primary btn-round text-uppercase" role="button" aria-disabled="true">+ notícias</a>
+              <a href="<?php echo home_url('/noticias'); ?>" class="btn btn-primary btn-round text-uppercase" role="button" aria-disabled="true">+ <?php pll_e('Notícias'); ?></a>
             </div>
           </div>
 

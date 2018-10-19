@@ -58,7 +58,7 @@ section {
 
 #pesquisar-customizado:focus {
   background-color: #fff;
-  border: 2px solid black;
+  border: 1px solid #c1c1c1;
   cursor: text;
   outline: 0;
   width: 230px;
@@ -430,8 +430,7 @@ input[type=search] {
 .edital .box-icones a:not(:first-child) {
   padding-left: 35px;
 }
-.form-modify, .nf-field-element textarea  {
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+.form-modify, textarea.form-modify  {
   background: #fff;
   border: none;
   border-radius: 6px;
@@ -440,15 +439,15 @@ input[type=search] {
   border: 1px solid #dadada;
 }
 
-.nf-field-element textarea {
+textarea.form-modify {
+  padding-left: 13px;
   max-height: 150px;
-  padding-left: 15px;
+  border-radius: 8px;
 }
 
-.nf-form-fields-required {
-
-  margin-bottom: 20px;
-} 
+.form-home .row {
+  margin: initial !important;
+}
 
 .title-2 {
   color: #27AAE1;
@@ -757,6 +756,10 @@ span.current {
   font-size: 16px;
 }
 
+.wpcf7-submit {
+  width: auto !important;
+}
+
 .bop-nav-search , .screen-reader-text{
   display: none;
 }
@@ -829,7 +832,7 @@ ul.page-numbers li {
 }
 
 .txts {
-  padding-top: 112px;
+  padding-top: 140px;
 }
 
 .noticias-topo {
@@ -837,6 +840,15 @@ ul.page-numbers li {
   background-size: cover;
   height: 210px;
 }
+
+.lang-item {
+  margin: 7px 15px auto 15px;
+}
+
+.wpcf7-form {
+  margin-top: 20px;
+}
+
 
 
 

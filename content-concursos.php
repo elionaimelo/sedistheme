@@ -16,7 +16,7 @@
                                             
                                             <h5><a title="<?php the_title_attribute() ?>" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h5>
 
-                                            <p class="data">Postado em: <?php the_time('j \d\e F \d\e Y') ?></p>
+                                            <p class="data"><?php pll_e('Postado em:'); ?> <?php the_time('j \d\e F \d\e Y') ?></p>
                                             
 
                                             <p><?php the_content(); ?></p>

@@ -35,7 +35,7 @@
 
 
 										<?php 
-											}if (is_page( 'concursos' ) ): ?>
+											}if (is_page( 'concursos' ) || is_page( 'concourse' ) ): ?>
 												
 												<?php get_template_part( 'content', 'concursos' ); ?>
 
@@ -46,13 +46,15 @@
 											?>
 											
 											<?php
-											if (is_page( 'contato' ) ): 
+											if (is_page( 'contato' ) || is_page( 'contact' ) ): 
 							
-												echo do_shortcode("[ninja_form id=2]"); 
+												echo do_shortcode("[cf7-form cf7key='teste']"); 
 
 
 											?>
-											<h3>Localização</h3>
+											<div class="clearfix"></div>
+											<br>
+											<h3><?php pll_e('Localização'); ?></h3>
 											<?php
 
 												if( is_active_sidebar('widget-5')) : ?> 

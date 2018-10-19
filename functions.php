@@ -118,6 +118,13 @@ function sedis_widgets_init() {
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</div>',
 	));
+
+	register_sidebar( array(
+		'name'          => esc_html__( 'Telefone de contato', 'sedis' ),
+		'id'            => 'widget-6',
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
+	));
 	
 	
 }
@@ -234,8 +241,8 @@ function wp_custom_breadcrumbs() {
 	
 		function wpex_pagination() {
 			
-			$prev_arrow = is_rtl() ? 'PRÓXIMO' : 'ANTERIOR';
-			$next_arrow = is_rtl() ? 'ANTERIOR' : 'PRÓXIMO';
+			$prev_arrow = is_rtl() ? '>' : '<';
+			$next_arrow = is_rtl() ? '<' : '>';
 			
 			global $wp_query;
 			$total = $wp_query->max_num_pages;
@@ -260,6 +267,27 @@ function wp_custom_breadcrumbs() {
 				 ) );
 			}
 		}
-		
 	}
+
+	//tradução para o tema
+	add_action('init', function() {
+		pll_register_string('saiba-mais', 'Saiba mais');
+		pll_register_string('titulo-sobre', 'Sobre');
+		pll_register_string('txt-ambientes-virtuais', 'Ambientes virtuais de aprendizagem');
+		pll_register_string('title-concursos', 'Últimos editais e concursos');
+		pll_register_string('title-contato', 'Contato');
+		pll_register_string('txt-postado', 'Postado em:');
+		pll_register_string('titulo-portfolio', 'Portfólio');
+		pll_register_string('titulo-materiais', 'Materiais de educação e comunicação');
+		pll_register_string('titulo-noticias', 'Notícias');
+		pll_register_string('txt-polos', 'Polos de apoio');
+		pll_register_string('txt-cursos', 'Cursos');
+		pll_register_string('txt-duvidas-frequentes', 'Dúvidas frequentes');
+		pll_register_string('txt-categoria', 'Categoria');
+		pll_register_string('placeholder-pesquisar', 'Pesquisar');
+		pll_register_string('txt-localizacao', 'Localização');
+	});
+	
+
+	
 	

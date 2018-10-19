@@ -19,7 +19,7 @@ Template Name: modelo1
                           <?php dynamic_sidebar('widget-1') ?>
                         </article>
 
-                      <a class="btn btn-primary btn-round btn-lg" role="button" aria-disabled="true">Saiba mais</a>
+                      <a class="btn btn-primary btn-round btn-lg" role="button" aria-disabled="true"><?php pll_e('Saiba mais'); ?></a>
 
                       </div>
                       <div class="col-md-6 reveal7">
@@ -38,7 +38,7 @@ Template Name: modelo1
                         <?php dynamic_sidebar('widget-1') ?>
                       </article>
 
-                    <a class="btn btn-primary btn-round btn-lg" role="button" aria-disabled="true">Saiba mais</a>
+                    <a class="btn btn-primary btn-round btn-lg" role="button" aria-disabled="true"><?php pll_e('Saiba mais'); ?></a>
 
                 <?php endif;  ?>
                   
@@ -48,14 +48,14 @@ Template Name: modelo1
       </div>
     </section>
 
-    <section id="navegacao-rapida">
+    <!-- <section id="navegacao-rapida">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
                         <h5 class="title">Navegue mais rápidamente pelo conteúdo</h5>
                         <nav>
                             <ul class="links-rapido">
-                                <li><a href="#portfolio">Portfólio</a></li>
+                                <li><a href="#portfolio"><?php pll_e('Portfólio'); ?></a></li>
                                 <li><a href="#polos-apoio">Polos de apoio</a></li>
                                 <li><a href="#cursos">Cursos</a></li>
                                 <li><a href="#duvidas-frequentes">Dúvidas frequentes</a></li>
@@ -64,13 +64,13 @@ Template Name: modelo1
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
 
     <section id="portfolio">
       <div class="container">
-        <h3 class="title-pg">Portfólio</h3>
+        <h3 class="title-pg"><?php pll_e('Portfólio'); ?></h3>
 
-        <p class="ambientes">Ambientes virtuais de aprendizagem</p>
+        <p class="ambientes"><?php pll_e('Ambientes virtuais de aprendizagem'); ?></p>
         <div class="row">
             <?php 
                 $args = array( 'post_type' => 'ambientesvirtuais', 'posts_per_page' => 4 );
@@ -113,7 +113,7 @@ Template Name: modelo1
           
                 <div class="row">
                     <div class="col-lg-12">
-                        <h5 class="subtitle">Materiais de educação e comunicação</h5>
+                        <h5 class="subtitle"><?php pll_e('Materiais de educação e comunicação'); ?></h5>
                     </div>
                 </div>
 
@@ -130,7 +130,7 @@ Template Name: modelo1
                 <div class="row">
                     <div class="col-md-12">
 
-                            <h3 class="title-pg">Polos de apoio</h3>
+                            <h3 class="title-pg"><?php pll_e('Polos de apoio'); ?></h3>
 
                             <div id="accordion" role="tablist" aria-multiselectable="true" class="card-collapse">
                             <?php 
@@ -175,7 +175,7 @@ Template Name: modelo1
                     <div class="row">
                         <div class="col-md-12">
     
-                                <h3 class="title-pg">Cursos</h3>
+                                <h3 class="title-pg"><?php pll_e('Cursos'); ?></h3>
     
                                 <div id="acordion2" role="tablist" aria-multiselectable="true" class="card-collapse rotate-icon-acordion">
                                 <?php 
@@ -220,7 +220,7 @@ Template Name: modelo1
                     <div class="row">
                         <div class="col-md-12">
     
-                                <h3 class="title-pg">Dúvidas frequentes</h3>
+                                <h3 class="title-pg"><?php pll_e('Dúvidas frequentes'); ?></h3>
     
                                 <div id="acordion3" role="tablist" aria-multiselectable="true" class="card-collapse rotate-icon-acordion">
                                         <?php 
