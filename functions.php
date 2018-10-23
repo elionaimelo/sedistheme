@@ -154,10 +154,10 @@ function wp_custom_breadcrumbs() {
 	  if ( is_category() ) {
 		$thisCat = get_category(get_query_var('cat'), false);
 		if ($thisCat->parent != 0) echo get_category_parents($thisCat->parent, TRUE, ' ' . $delimiter . ' ');
-		echo $before . 'categoria "' . single_cat_title('', false) . '"' . $after;
+		echo $before . '"' . single_cat_title('', false) . '"' . $after;
    
 	  } elseif ( is_search() ) {
-		echo $before . 'Resultado da pesquisa por "' . get_search_query() . '"' . $after;
+		echo $before . '"' . get_search_query() . '"' . $after;
    
 	  } elseif ( is_day() ) {
 		echo '<a href="' . get_year_link(get_the_time('Y')) . '">' . get_the_time('Y') . '</a> ' . $delimiter . ' ';
@@ -215,12 +215,12 @@ function wp_custom_breadcrumbs() {
 		if ($showCurrent == 1) echo ' ' . $delimiter . ' ' . $before . get_the_title() . $after;
    
 	  } elseif ( is_tag() ) {
-		echo $before . 'Posts da tag "' . single_tag_title('', false) . '"' . $after;
+		echo $before . 'Tag "' . single_tag_title('', false) . '"' . $after;
    
 	  } elseif ( is_author() ) {
 		 global $author;
 		$userdata = get_userdata($author);
-		echo $before . 'Artigos postados por ' . $userdata->display_name . $after;
+		echo $before . '' . $userdata->display_name . $after;
    
 	  } elseif ( is_404() ) {
 		echo $before . 'Error 404' . $after;
