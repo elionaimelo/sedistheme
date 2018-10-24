@@ -13,10 +13,10 @@ Template Name: portfólio
                 <div class="col-md-12">
 							
 									
-									<?php 
-										echo do_shortcode("[visual_portfolio id='134' class='']"); 
-										
-									?>	
+                  <?php 
+                        echo do_shortcode("[visual_portfolio id='134' class='']"); 
+                        
+                  ?>	
 
 
                 </div>
