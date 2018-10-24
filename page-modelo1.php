@@ -48,23 +48,7 @@ Template Name: modelo1
       </div>
     </section>
 
-    <!-- <section id="navegacao-rapida">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <h5 class="title">Navegue mais rápidamente pelo conteúdo</h5>
-                        <nav>
-                            <ul class="links-rapido">
-                                <li><a href="#portfolio"><?php pll_e('Portfólio'); ?></a></li>
-                                <li><a href="#polos-apoio">Polos de apoio</a></li>
-                                <li><a href="#cursos">Cursos</a></li>
-                                <li><a href="#duvidas-frequentes">Dúvidas frequentes</a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
-            </div>
-        </section> -->
+
 
     <section id="portfolio">
       <div class="container">
@@ -132,7 +116,7 @@ Template Name: modelo1
 
                             <h3 class="title-pg"><?php pll_e('Polos de apoio'); ?></h3>
 
-                            <div id="accordion" role="tablist" aria-multiselectable="true" class="card-collapse">
+                            <div id="accordion" role="tablist" aria-multiselectable="true" class="card-collapse rotate-icon-acordion">
                             <?php 
                                         $args = array( 'post_type' => 'polos');
 
