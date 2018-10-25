@@ -20,12 +20,14 @@ function carrega_scripts(){
 	wp_enqueue_script( 'scroll-reveal', 'https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js', array(), null, true);	
 	wp_enqueue_script( 'smooth-scroll', 'https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@14/dist/smooth-scroll.polyfills.min.js', array(), null, true);	
 
-    // Enfileirando estilos e scripts próprios
+		// Enfileirando estilos e scripts próprios
+		wp_enqueue_style( 'sedis', get_stylesheet_uri() );
     wp_enqueue_style( 'now-ui-kit', get_template_directory_uri() . '/css/now-ui-kit.css', array(), '1.0', 'all');
     wp_enqueue_style( 'pe-icon-7-stroke', get_template_directory_uri() . '/css/Pe-icon-7-stroke.css', array(), '1.0', 'all');
     wp_enqueue_style( 'linea_basic', get_template_directory_uri() . '/css/linea_basic_font.css', array(), '1.0', 'all');
     wp_enqueue_style( 'elegant-icons', get_template_directory_uri() . '/css/elegant-icons.css', array(), '1.0', 'all');
 	wp_enqueue_style( 'template', get_template_directory_uri() . '/css/template.css', array(), '1.0', 'all');
+	
     
     
 	wp_enqueue_script( 'template', get_template_directory_uri(). '/js/template.js', array(), null, true);	
