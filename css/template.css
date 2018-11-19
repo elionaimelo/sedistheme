@@ -10,6 +10,8 @@ a {
   color: #27AAE1;
 }
 
+
+
 a:hover {
   text-decoration: none;
 }
@@ -855,6 +857,14 @@ ul.page-numbers li {
 }
 
 
+.btn-webmail {
+  padding: 10px 20px;
+}
+
+.webmail-display {
+  display: none;
+}
+
 @media screen and (max-width: 991px) {
   .sidebar-collapse .navbar .navbar-toggler-bar, .sidebar-collapse .navbar-collapse:before {
     background: #004A6F;
@@ -867,11 +877,17 @@ ul.page-numbers li {
   .search-submit {
     color: white;
   }
+
+  .webmail-display {
+    display: block;
+  }
 }
 @media screen and (max-width: 768px) {
   .custom-search {
     padding-left: 25px;
   }
+
+
 
   .navbar p, .navbar.bg-white:not(.navbar-transparent) a:not(.dropdown-item):not(.btn), .custom-search {
     color: white;

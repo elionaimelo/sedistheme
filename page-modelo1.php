@@ -19,7 +19,7 @@ Template Name: modelo1
                           <?php dynamic_sidebar('widget-1') ?>
                         </article>
 
-                      <a class="btn btn-primary btn-round btn-lg" role="button" aria-disabled="true"><?php pll_e('Saiba mais'); ?></a>
+                       <a href="<?php echo esc_url( home_url( '/sobre' ) ); ?>" class="btn btn-primary btn-round btn-lg" role="button" aria-disabled="true"><?php pll_e('Saiba mais'); ?></a>
 
                       </div>
                       <div class="col-md-6 reveal7">
@@ -38,7 +38,7 @@ Template Name: modelo1
                         <?php dynamic_sidebar('widget-1') ?>
                       </article>
 
-                    <a class="btn btn-primary btn-round btn-lg" role="button" aria-disabled="true"><?php pll_e('Saiba mais'); ?></a>
+                     <a href="<?php echo esc_url( home_url( '/sobre' ) ); ?>" class="btn btn-primary btn-round btn-lg" role="button" aria-disabled="true"><?php pll_e('Saiba mais'); ?></a>
 
                 <?php endif;  ?>
                   
