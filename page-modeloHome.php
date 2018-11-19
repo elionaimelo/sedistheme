@@ -165,7 +165,7 @@ Template Name: Home
                                         <?php dynamic_sidebar('widget-6') ?>
                                     <?php endif;  ?>
                       
-                                    <?php echo do_shortcode("[cf7-form cf7key='teste']");  ?>
+                                    <?php echo do_shortcode("[cf7-form cf7key='teste1']");  ?>
       
                             </div>
                         </div>

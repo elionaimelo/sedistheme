@@ -48,7 +48,7 @@
 											<?php
 											if (is_page( 'contato' ) || is_page( 'contact' ) ): 
 							
-												echo do_shortcode("[cf7-form cf7key='teste']"); 
+												echo do_shortcode("[cf7-form cf7key='teste1']"); 
 
 
 											?>
