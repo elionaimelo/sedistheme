@@ -2,9 +2,9 @@
 	<div class="card-body">
 		<div class="pg-interna">
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-			<h5><?php the_title(); ?></h5>
-			
-				<p class="data">Publicado por <?php the_author_posts_link(); ?> em <?php echo get_the_date(); ?></p>
+				<h5><?php the_title(); ?></h5>
+				<p class="data"><?php echo get_the_date(); ?></p>
+				<?php $img_url = wp_get_attachment_image_src(get_post_thumbnail_id(),'kev-feature'); ?> 
 
 				<?php
 					if ( has_post_thumbnail() ) {
@@ -30,7 +30,7 @@
 
 					<?php
 						if(has_category()) {
-							?> <p>Categoria: <?php the_category(', '); ?></p>
+							?> <?php pll_e('Categoria'); ?>: <?php the_category(', '); ?></p>
 					<?php	} else {
 							
 						}	

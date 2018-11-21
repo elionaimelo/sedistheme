@@ -52,12 +52,12 @@ Template Name: modelo1
 
     <section id="portfolio">
       <div class="container">
-        <h3 class="title-pg"><?php pll_e('Portfólio'); ?></h3>
+      <h3 class="title-pg"><?php pll_e('Serviço'); ?></h3>
 
-        <p class="ambientes"><?php pll_e('Ambientes virtuais de aprendizagem'); ?></p>
+        
         <div class="row">
-            <?php 
-                $args = array( 'post_type' => 'ambientesvirtuais', 'posts_per_page' => 4 );
+        <?php 
+                $args = array( 'post_type' => 'servicos');
 
                         $the_query = new WP_Query( $args ); 
 
@@ -69,7 +69,7 @@ Template Name: modelo1
             
               <div class="col-lg-3 col-md-6">
                   <div class="card">
-                      <a  href="<?php echo the_cfc_field('ambientesbox', 'link');?>" target="_blank">
+                      <a  href="<?php echo the_cfc_field('servicesbox', 'linkservico');?>" target="_blank">
                         <div class="card-body">
                             <div class="row altura-card">
                               <div class="col-4 mx-auto align-self-center remove-margem">

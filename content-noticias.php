@@ -23,8 +23,15 @@
                             
                         }	
                     ?>
-                
-                    <p>  <?php pll_e('Categoria'); ?>: <?php the_category(', '); ?></p>
+            
+
+					<?php
+						if(has_category()) {
+							?> <?php pll_e('Categoria'); ?>: <?php the_category(', '); ?></p>
+					<?php	} else {
+							
+						}	
+					?>
         
         <?php   
                 else:
@@ -42,7 +49,13 @@
                         }	
                     ?>
                 
-                    <p> <?php pll_e('Categoria'); ?>: <?php the_category(', '); ?></p>          
+                <?php
+						if(has_category()) {
+							?> <?php pll_e('Categoria'); ?>: <?php the_category(', '); ?></p>
+					<?php	} else {
+							
+						}	
+					?>         
     
         <?php 
                 endif; 
