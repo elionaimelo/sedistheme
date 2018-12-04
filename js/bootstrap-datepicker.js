@@ -5,8 +5,8 @@
  */
 
 (function(factory) {
-  if (typeof define === 'function' && define.amd) {
-    define(['jquery'], factory);
+  if (typeof define === "function" && define.amd) {
+    define(["jquery"], factory);
   } else if (typeof exports === 'object') {
     factory(require('jquery'));
   } else {
@@ -183,7 +183,7 @@
     _check_template: function(tmp) {
       try {
         // If empty
-        if (tmp === undefined || tmp === '') {
+        if (tmp === undefined || tmp === "") {
           return false;
         }
         // If no html, everything ok
@@ -1712,7 +1712,7 @@
     maxViewMode: 4,
     multidate: false,
     multidateSeparator: ',',
-    orientation: 'auto',
+    orientation: "auto",
     rtl: false,
     startDate: -Infinity,
     startView: 0,
@@ -1741,14 +1741,14 @@
   $.fn.datepicker.Constructor = Datepicker;
   var dates = $.fn.datepicker.dates = {
     en: {
-      days: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
-      daysShort: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'],
-      daysMin: ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'],
-      months: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
-      monthsShort: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-      today: 'Today',
-      clear: 'Clear',
-      titleFormat: 'MM yyyy'
+      days: ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      daysShort: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+      daysMin: ["Su", "Mo", "Tu", "We", "Th", "Fr", "Sa"],
+      months: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+      monthsShort: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+      today: "Today",
+      clear: "Clear",
+      titleFormat: "MM yyyy"
     }
   };
 
@@ -1793,7 +1793,7 @@
       var separators = format.replace(this.validParts, '\0').split('\0'),
         parts = format.match(this.validParts);
       if (!separators || !separators.length || !parts || parts.length === 0) {
-        throw new Error('Invalid date format.');
+        throw new Error("Invalid date format.");
       }
       return {
         separators: separators,

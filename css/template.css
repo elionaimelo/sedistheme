@@ -586,6 +586,7 @@ textarea.form-modify {
   font-size: 24px;
   font-weight: 300;
   color: #404040;
+  margin-top: 30px;
 }
 
 .carousel .carousel-inner {
@@ -877,6 +878,28 @@ ul.page-numbers li {
   padding: 20px;
 }
 
+#servicosCarousel {
+  margin-bottom: 30px;
+}
+
+#carouselServicos .car-caption {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column-reverse;
+  margin-bottom: 17px;
+  text-align: center;
+}
+
+#carouselServicos .car-caption h3 {
+  line-height: 1.1em;
+}
+
+#portfolio section{
+  padding: 0;
+}
+
+
 
 @media screen and (min-width: 1600px) {
   #destaques {
@@ -920,6 +943,17 @@ ul.page-numbers li {
 
   #ambientes-virtuais {
     margin-top: -115px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #carouselDestaque h2{
+    height: 136px;
+    white-space: pre-line;
+    overflow: hidden;
+    display: inline-block;
+    text-overflow: ellipsis;
+    margin: 0;
   }
 }
 
