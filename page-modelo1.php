@@ -118,7 +118,7 @@ Template Name: modelo1
 
                             <div id="accordion" role="tablist" aria-multiselectable="true" class="card-collapse rotate-icon-acordion">
                             <?php 
-                                        $args = array( 'post_type' => 'polos');
+                                        $args = array( 'post_type' => 'polos' , 'posts_per_page'  => -1,);
 
                                         $the_query = new WP_Query( $args ); 
                                         if ( $the_query->have_posts() ) :
