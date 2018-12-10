@@ -140,7 +140,7 @@ Template Name: Home
     </section>
 
     <section id="editais">
-      <img src="<?php echo get_template_directory_uri(); ?>/images/bg-editais-top.png" class="img-fluid" alt="">
+      <img src="<?php echo get_template_directory_uri(); ?>/images/bg-editais-top.png" class="img-fluid img-aux" alt="">
       <div class="content">
           <div class="container">
               <h3 class="title-pg"><?php pll_e('Últimos editais e concursos'); ?></h3>
@@ -180,7 +180,7 @@ Template Name: Home
             </div>
       </div>
 
-      <img src="<?php echo get_template_directory_uri(); ?>/images/bg-editais-bottom.png" class="img-fluid" alt="">
+      <img src="<?php echo get_template_directory_uri(); ?>/images/bg-editais-bottom.png" class="img-fluid img-aux" alt="">
     </section>
 
     <section id="portfolio">
@@ -310,7 +310,7 @@ Template Name: Home
           </div>
       </div>
 
-      <img src="<?php echo get_template_directory_uri(); ?>/images/bg-noticias-bottom.png" alt="" class="img-fluid">
+      <img src="<?php echo get_template_directory_uri(); ?>/images/bg-noticias-bottom.png" alt="" class="img-fluid img-aux">
     </section>
 
     <?php get_template_part( 'content', 'footer' ); ?>

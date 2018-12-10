@@ -899,6 +899,21 @@ ul.page-numbers li {
   padding: 0;
 }
 
+.select-custom {
+  background: white;
+}
+
+
+@media screen and (max-width: 1600) and (max-width: 2000px) {
+  .img-aux {
+    display: none;
+  }
+
+  #destaques , .noticias-topo {
+    background: none;
+  }
+  
+}
 
 
 @media screen and (min-width: 1600px) {
