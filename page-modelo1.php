@@ -208,7 +208,7 @@ Template Name: modelo1
     
                                 <div id="acordion3" role="tablist" aria-multiselectable="true" class="card-collapse rotate-icon-acordion">
                                         <?php 
-                                                $args = array( 'post_type' => 'duvidasfrequentes');
+                                                $args = array( 'post_type' => 'duvidasfrequentes', 'posts_per_page'  => -1, 'orderby'=> 'title', 'order' => 'ASC');
 
                                                 $the_query = new WP_Query( $args ); 
                                                 if ( $the_query->have_posts() ) :
