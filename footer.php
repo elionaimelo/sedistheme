@@ -10,10 +10,17 @@
       ga('create','UA-127297332-1');ga('send','pageview');
     </script>
 
+
    <?php wp_footer(); ?>
 
-     <script>
-            var scroll = new SmoothScroll('#navegacao-rapida a[href*="#"]');
-    </script>
+   <script>
+grecaptcha.ready(function() {
+grecaptcha.execute('6LdatYAUAAAAAGPlMK2BedgARFNOgTah3EzIh-aX', {action: 'action_name'})
+.then(function(token) {
+// Verify the token on the server.
+});
+});
+</script>
+
 </body>
 </html>

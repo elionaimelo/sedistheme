@@ -6,7 +6,7 @@
 	<title><?php wp_title('|'); ?></title>
     <meta name="description" content="<?php bloginfo('description'); ?>">
     <meta name="google-site-verification" content="EZWhVsfg_SiXyOKt0W29k0vG7Ltwd2jsdGCO0n8KvyE" />
-    <script src='https://www.google.com/recaptcha/api.js'></script>
+    <script src='https://www.google.com/recaptcha/api.js?render=6LdatYAUAAAAAGPlMK2BedgARFNOgTah3EzIh-aX'></script>
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,700" rel="stylesheet">
 
 	<?php wp_head(); ?>

@@ -280,26 +280,54 @@ function wp_custom_breadcrumbs() {
 		}
 	}
 
-	//tradução para o tema
-	// add_action('init', function() {
-	// 	pll_register_string('saiba-mais', 'Saiba mais');
-	// 	pll_register_string('titulo-sobre', 'Sobre');
-	// 	pll_register_string('txt-ambientes-virtuais', 'Ambientes virtuais de aprendizagem');
-	// 	pll_register_string('title-concursos', 'Últimos editais e concursos');
-	// 	pll_register_string('title-contato', 'Contato');
-	// 	pll_register_string('txt-postado', 'Postado em:');
-	// 	pll_register_string('titulo-portfolio', 'Portfólio');
-	// 	pll_register_string('titulo-materiais', 'Materiais de educação e comunicação');
-	// 	pll_register_string('titulo-noticias', 'Notícias');
-	// 	pll_register_string('txt-polos', 'Polos de apoio');
-	// 	pll_register_string('txt-cursos', 'Cursos');
-	// 	pll_register_string('txt-duvidas-frequentes', 'Dúvidas frequentes');
-	// 	pll_register_string('txt-categoria', 'Categoria');
-	// 	pll_register_string('placeholder-pesquisar', 'Pesquisar');
-	// 	pll_register_string('txt-localizacao', 'Localização');
-	// 	pll_register_string('txt-servico', 'Serviço');
-	// });
+
+	// if ( !function_exists( 'polylang' ) ) {
+	// 		//tradução para o tema
+	// 		add_action('init', function() {
+	// 			pll_register_string('saiba-mais', 'Saiba mais');
+	// 			pll_register_string('titulo-sobre', 'Sobre');
+	// 			pll_register_string('txt-ambientes-virtuais', 'Ambientes virtuais de aprendizagem');
+	// 			pll_register_string('title-concursos', 'Últimos editais e concursos');
+	// 			pll_register_string('title-contato', 'Contato');
+	// 			pll_register_string('txt-postado', 'Postado em:');
+	// 			pll_register_string('titulo-portfolio', 'Portfólio');
+	// 			pll_register_string('titulo-materiais', 'Materiais de educação e comunicação');
+	// 			pll_register_string('titulo-noticias', 'Notícias');
+	// 			pll_register_string('txt-polos', 'Polos de apoio');
+	// 			pll_register_string('txt-cursos', 'Cursos');
+	// 			pll_register_string('txt-duvidas-frequentes', 'Dúvidas frequentes');
+	// 			pll_register_string('txt-categoria', 'Categoria');
+	// 			pll_register_string('placeholder-pesquisar', 'Pesquisar');
+	// 			pll_register_string('txt-localizacao', 'Localização');
+	// 			pll_register_string('txt-servico', 'Serviço');
+	// 		});
+	// 	}
+
+	function strings_poly() {
+					pll_register_string('saiba-mais', 'Saiba mais');
+					pll_register_string('titulo-sobre', 'Sobre');
+					pll_register_string('txt-ambientes-virtuais', 'Ambientes virtuais de aprendizagem');
+					pll_register_string('title-concursos', 'Últimos editais e concursos');
+					pll_register_string('title-contato', 'Contato');
+					pll_register_string('txt-postado', 'Postado em:');
+					pll_register_string('titulo-portfolio', 'Portfólio');
+					pll_register_string('titulo-materiais', 'Materiais de educação e comunicação');
+					pll_register_string('titulo-noticias', 'Notícias');
+					pll_register_string('txt-polos', 'Polos de apoio');
+					pll_register_string('txt-cursos', 'Cursos');
+					pll_register_string('txt-duvidas-frequentes', 'Dúvidas frequentes');
+					pll_register_string('txt-categoria', 'Categoria');
+					pll_register_string('placeholder-pesquisar', 'Pesquisar');
+					pll_register_string('txt-localizacao', 'Localização');
+					pll_register_string('txt-servico', 'Serviço');
+	}
+
+	if ( function_exists( 'polylang' ) ) {
+		add_action( 'init', 'strings_poly' );
+	}
 	
+
+
 
 	
 	
