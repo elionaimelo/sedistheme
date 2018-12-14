@@ -331,23 +331,26 @@ input[type=search] {
  .edital:not(:first-child) {
   padding-top: 20px;
 }
-.edital h5 , .pg-interna h5 , .sidebar1 ul li {
+.edital h5 , .pg-interna h5 , .sidebar1 .posts-randomicos ul li {
   padding-left: 1.5em;
   margin-bottom: 3px;
-  /* text-indent: -1.5em; */
   font-weight: 500;
 }
 
-.pg-interna h5 , .sidebar1 ul li , .postagem h5{
+.pg-interna h5 , .sidebar1 .posts-randomicos ul li , .postagem h5{
   padding-left: 1.5em;
   margin-bottom: 3px;
-  /* text-indent: -1.5em; */
   font-weight: 500;
 }
 
-/* .sidebar1 ul li{
-  text-indent: -2em;
-} */
+.postagem h5{
+  text-indent: -1.5em;
+}
+
+
+.sidebar1 {
+  margin-bottom: 40px;
+}
 
 .sidebar-titulo {
   border-bottom: 1px solid #CECECE;
@@ -356,14 +359,9 @@ input[type=search] {
 
 .edital .data , .pg-interna .data , .postagem .data {
   color: #9c9c9c;
-  /* margin-bottom: 10px; */
 }
 
-/* .sidebar1 ul {
-  margin-left: -30px;
-} */
-
-.edital h5:before , .pg-interna h5:before , .sidebar1 ul li:before {
+.edital h5:before , .pg-interna h5:before , .sidebar1 .posts-randomicos ul li:before {
   font-family: "ElegantIcons";
   content: "=";
   padding-right: 10px;
@@ -903,6 +901,56 @@ ul.page-numbers li {
   background: white;
 }
 
+/* css para o post */
+
+.single-post .pg-interna {
+  position: relative;
+  margin: 0 auto;
+  padding: 35px 20px 0;
+}
+
+.pg-interna .post h1{
+  font-size: 1.5rem;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+.pg-interna .post p {
+  font-size: 20px;
+  margin: 0 0 1.5em;
+  line-height: 32px;
+}
+
+.pg-interna .post .postagem-pic {
+  display: block;
+  margin: auto;
+}
+
+.pg-interna .post p.data {
+  font-size: 14px;
+  text-align: center;
+}
+
+.pg-interna .post li {
+  word-break: break-word;
+  margin: .5em 0;
+  padding-left: .3em;
+  line-height: 1.6em;
+}
+
+.pg-interna .post h2 {
+  margin: .5em 0 .2em;
+  font-size: 3.6rem;
+  font-weight: 700;
+}
+
+.pg-interna .post blockquote {
+  margin: 0 0 1.5em;
+  padding: 0 1.5em;
+  border-left: 3px solid #3eb0ef;
+}
+
 
 @media screen and (max-width: 1600) and (max-width: 2000px) {
   .img-aux {
@@ -958,6 +1006,18 @@ ul.page-numbers li {
 
   #ambientes-virtuais {
     margin-top: -115px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .single-post .pg-interna {
+    position: relative;
+    margin: 50px auto;
+    padding: 5px;
+  }
+
+  .bg-interno {
+    display: none;
   }
 }
 

@@ -14,24 +14,26 @@
        
                     $trimmed_content = wp_trim_words( $content, 40, '<div class="clearfix"></div><p><a href="'. get_permalink() .'" class="btn btn-primary btn-round" role="button" aria-disabled="true">Show more</a></p>' ); ?>
                     <p><?php echo $trimmed_content; ?></p>
-                    <br>
-
+                    <p>
                     <?php
                         if(has_tag()) {
-                            ?> <p><?php the_tags('Tags: ', ', '); ?></p>
+                            ?> <p><?php the_tags('Tags: ', ', '); ?>
                     <?php	} else {
                             
                         }	
                     ?>
-            
+                    </p>
 
-					<?php
+                    <p>
+                
+                <?php
 						if(has_category()) {
-							?> <?php pll_e('Categoria'); ?>: <?php the_category(', '); ?></p>
+							?> <?php pll_e('Categoria'); ?>: <?php the_category(', '); ?>
 					<?php	} else {
 							
 						}	
-					?>
+                    ?>   
+                    </p>      
         
         <?php   
                 else:
@@ -39,23 +41,27 @@
        
                     $trimmed_content = wp_trim_words( $content, 40, '<div class="clearfix"></div><p><a href="'. get_permalink() .'" class="btn btn-primary btn-round" role="button" aria-disabled="true">Saiba mais</a></p>' ); ?>
                     <p><?php echo $trimmed_content; ?></p>
-                    <br>
+                    <p>
 
                     <?php
                         if(has_tag()) {
-                            ?> <p><?php the_tags('Tags: ', ', '); ?></p>
+                            ?> <p><?php the_tags('Tags: ', ', '); ?>
                     <?php	} else {
                             
                         }	
                     ?>
+                    </p>
+
+                    <p>
                 
                 <?php
 						if(has_category()) {
-							?> <?php pll_e('Categoria'); ?>: <?php the_category(', '); ?></p>
+							?> <?php pll_e('Categoria'); ?>: <?php the_category(', '); ?>
 					<?php	} else {
 							
 						}	
-					?>         
+                    ?>   
+                    </p>      
     
         <?php 
                 endif; 

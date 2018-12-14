@@ -2,7 +2,7 @@
 	<div class="card-body">
 		<div class="pg-interna">
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-				<h5><?php the_title(); ?></h5>
+				<h1><?php the_title(); ?></h1>
 				<p class="data"><?php echo get_the_date(); ?></p>
 				<?php $img_url = wp_get_attachment_image_src(get_post_thumbnail_id(),'kev-feature'); ?> 
 
@@ -20,21 +20,27 @@
 				<p><?php the_content(); ?></p>
 
 				
+				<p>
+
 					<?php
 						if(has_tag()) {
-							?> <p><?php the_tags('Tags: ', ', '); ?></p>
+							?> <p><?php the_tags('Tags: ', ', '); ?>
 					<?php	} else {
 							
 						}	
 					?>
+					</p>
+
+					<p>
 
 					<?php
 						if(has_category()) {
-							?> <?php pll_e('Categoria'); ?>: <?php the_category(', '); ?></p>
+							?> <?php pll_e('Categoria'); ?>: <?php the_category(', '); ?>
 					<?php	} else {
 							
 						}	
-					?>
+					?>   
+					</p>      
 					
 			</article>
 		</div>
